@@ -22,7 +22,18 @@ body {
 }
 
 main {
-    margin-top: 70px;
+    margin-top: 55px;
+}
+/* === END CONTAINERS === */
+
+/* === SECTIONS ===*/
+.one-page-section {
+
+}
+
+.one-page-section h1 {
+    font-weight: bold;
+    font-style: italic;
 }
 
 .section-teal {
@@ -34,7 +45,7 @@ main {
     background-color: #f1f1f2;
     color: #008080;
 }
-/* === END CONTAINERS === */
+/* === END SECTIONS ===*/
 
 
 
