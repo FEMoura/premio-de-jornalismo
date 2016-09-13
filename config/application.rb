@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module PremioJornalismo
   class Application < Rails::Application
+    config.i18n.default_locale = 'pt-BR'
+    config.time_zone = 'Brasilia'
 
 	config.generators do |g|
 	  g.assets  false
