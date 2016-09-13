@@ -28,14 +28,32 @@ main {
 
 /* === SECTIONS ===*/
 .one-page-section {
-
+    padding: 30px 0;
 }
 
 .one-page-section h1 {
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
+    border-bottom: 4px solid #159098;
+    padding-bottom: 4px;
+    display: inline-block;
+    font-size: 51px;
+    margin-bottom: 20px;
 }
 
+.one-page-section h2 {
+    font-weight: 900;
+    font-style: italic;
+    border-bottom: 4px solid #159098;
+    padding-bottom: 4px;
+    display: inline-block;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.one-page-section p {
+    margin-bottom: 20px;
+}
 .section-teal {
     background-color: #008080;
     color: #f1f1f2;
