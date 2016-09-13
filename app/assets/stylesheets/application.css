@@ -11,5 +11,64 @@
  * file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require font-icon
  *= require_self
  */
+
+
+/* === CONTAINERS === */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    margin-top: 70px;
+}
+
+.section-teal {
+    background-color: #008080;
+    color: #f1f1f2;
+}
+
+.section-grey {
+    background-color: #f1f1f2;
+    color: #008080;
+}
+/* === END CONTAINERS === */
+
+
+
+/* === NAVS === */
+#main-nav {
+    background-color: #f1f1f2;
+}
+
+.navbar-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #008080;
+}
+#menu {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #008080;
+}
+
+.navbar-default .navbar-nav>li>a>i {
+    font-size: 20px;
+    vertical-align: text-top;
+}
+/* === END NAVS === */
+
+
+
+/* === TITLES ===*/
+section h1 {
+
+}
+/* === END TITLES ===*/

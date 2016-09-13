@@ -13,8 +13,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <meta name="theme-color" content="#00a099">
+  <meta name="theme-color" content="#008080">
   <meta name="msapplication-TileImage" content="/images/icon.png">
+
+
+  <!-- GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700,700i" rel="stylesheet">
 
 
 </head>
@@ -23,7 +27,11 @@
 
 <%= render partial: 'layouts/nav' %>
 
-<%= yield %>
+<main id="content" class="container">
+  <%= yield %>
+</main>
+
+
 
 <%= render partial: 'layouts/footer' %>
 
