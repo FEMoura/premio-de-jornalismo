@@ -64,6 +64,19 @@ main {
     background-color: #f1f1f2;
     color: #008080;
 }
+.p-bold{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+}
+.one-page-section h2.semi-bold {
+    font-style: normal;
+    border-bottom: none;
+    padding-bottom: 4px;
+    display: inline-block;
+    font-size: 35px;
+    margin: 0px;
+}
 /* === END SECTIONS ===*/
 
 
