@@ -3,7 +3,7 @@
     background-color:#004c82;
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 400px;
 }
 .parallax-transition-1{
     background: url('/images/img1.JPG') 50% 0 fixed no-repeat;
