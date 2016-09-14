@@ -12,6 +12,7 @@
  *
  *= require bootstrap_and_overrides
  *= require font-icon
+ *= require parallax
  *= require_self
  */
 
@@ -38,7 +39,7 @@ main {
     padding-bottom: 4px;
     display: inline-block;
     font-size: 51px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .one-page-section h2 {
