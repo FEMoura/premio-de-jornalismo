@@ -71,3 +71,7 @@
 .icon-web:before {
   content: "\6b";
 }
+
+.icon-large {
+    font-size: 80px;
+}

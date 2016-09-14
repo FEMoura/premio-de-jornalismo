@@ -96,8 +96,25 @@ main {
 
 
 
-/* === TITLES ===*/
-section h1 {
-
+/* === IMAGES === */
+.category-circle {
+    background-color: #008080;
+    text-align: center;
+    width: 220px;
+    height: 220px;
+    position: relative;
+    padding-top: 40px;
+    color: #f1f1f2;
 }
-/* === END TITLES ===*/
+
+.category-circle i {
+   font-size: 100px;
+}
+
+.category-circle span {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+}
+/* === END IMAGES === */
+
