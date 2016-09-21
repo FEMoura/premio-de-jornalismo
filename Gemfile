@@ -22,5 +22,7 @@ group :development do
 
   gem 'pry-rails'
 
+  gem 'guard-livereload', '~> 2.5', require: false
+
   gem 'start'
 end

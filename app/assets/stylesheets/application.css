@@ -20,6 +20,7 @@
 /* === CONTAINERS === */
 body {
     font-family: 'Raleway', sans-serif;
+    height: 100%;
 }
 
 main {
@@ -28,24 +29,59 @@ main {
 /* === END CONTAINERS === */
 
 /* === SECTIONS ===*/
+/* === BANNER ===*/
+.index-banner {
+    background: url('/images/banner.jpg') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+}
+.btn-banner:before {
+    display: inline-block !important;
+}
+.btn-banner {
+    background-color: #42a531;
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.9rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 13px 30px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    bottom: 0 !important;
+
+}
+/* === END BANNER ===*/
 .one-page-section {
-    padding: 30px 0;
+    padding: 70px 0;
 }
 
 .one-page-section h1 {
     font-weight: 900;
     font-style: italic;
-    border-bottom: 4px solid #159098;
     padding-bottom: 4px;
     display: inline-block;
     font-size: 51px;
     margin-bottom: 50px;
 }
 
+.one-page-section span {
+    border-bottom: 4px solid #427ec3;
+}
+
 .one-page-section h2 {
     font-weight: 900;
     font-style: italic;
-    border-bottom: 4px solid #159098;
+    border-bottom: 4px solid #427ec3;
     padding-bottom: 4px;
     display: inline-block;
     font-size: 35px;
@@ -62,7 +98,7 @@ main {
 
 .section-grey {
     background-color: #f1f1f2;
-    color: #008080;
+    color: #47494d;;
 }
 .p-bold{
     font-style: normal;
@@ -84,6 +120,8 @@ main {
 /* === NAVS === */
 #main-nav {
     background-color: #f1f1f2;
+    border-color: #9ea6ad;
+    border-width: 0px 0 2px;
 }
 
 .navbar-header {
@@ -91,7 +129,7 @@ main {
     padding-bottom: 15px;
     font-size: 18px;
     font-weight: bold;
-    color: #008080;
+    color: #47494d;
 }
 #menu {
     font-weight: bold;
@@ -99,7 +137,7 @@ main {
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #008080;
+    color: #47494d;
 }
 
 .navbar-default .navbar-nav>li>a>i {
@@ -110,7 +148,7 @@ main {
 
 
 
-/* === IMAGES === */
+/* === SECTION CATEGORIES === */
 .category-circle {
     background-color: #008080;
     text-align: center;
@@ -126,9 +164,14 @@ main {
 }
 
 .category-circle span {
+    text-align: left;
     position: absolute;
     top: 65%;
     left: 20%;
 }
-/* === END IMAGES === */
+
+.category-circle .cine i {
+
+}
+/* === SECTION CATEGORIES === */
 
