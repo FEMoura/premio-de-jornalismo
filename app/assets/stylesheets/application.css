@@ -20,6 +20,7 @@
 /* === CONTAINERS === */
 body {
     font-family: 'Raleway', sans-serif;
+    height: 100%;
 }
 
 main {
@@ -28,6 +29,38 @@ main {
 /* === END CONTAINERS === */
 
 /* === SECTIONS ===*/
+/* === BANNER ===*/
+.index-banner {
+    background: url('/images/banner.jpg') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    text-align: center;
+}
+.btn-banner:before {
+    display: inline-block !important;
+}
+.btn-banner {
+    background-color: #42a531;
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.9rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    padding: 13px 30px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    bottom: 0 !important;
+
+}
+/* === END BANNER ===*/
 .one-page-section {
     padding: 70px 0;
 }
