@@ -43,29 +43,32 @@ main {
     text-align: center;
 }
 .index-honored{
-    background: url('/images/homenageado.jpg') no-repeat center top;
+    background: url('/images/homenageado-mobile.jpg') no-repeat center bottom;
     background-size: cover;
     width: 100%;
     padding: 0;
-    height: 60vh;
+    height: 50vh;
     text-align: center;
 }
 @media(min-width: 320px){
     .index-honored{
-        background: url('/images/homenageado-mobile.jpg') no-repeat center top;
-        background-size: cover;
-    }
-    .index-honored small{
-        font-size: 0.7em;
+        height: 95vh;
     }
 }
 @media(min-width: 992px){
     .index-honored{
-        background: url('/images/homenageado.jpg') no-repeat center top;
-        background-size: cover;
+        height: 50vh;
     }
     .index-honored small {
         font-size: 1em;
+    }
+}
+@media(min-width: 1200px){
+    .index-honored{
+        height: 45vh;
+    }
+    .index-honored small {
+        font-size: 1.2em;
     }
 }
 .index-honored h2, .index-honored-mobile h2 {
@@ -76,9 +79,6 @@ main {
     display: inline-flex;
     font-size: 3rem;
     margin-bottom: 20px;
-}
-.honored-text{
-    padding-top: 5rem;
 }
 
 .banner-shadow {
