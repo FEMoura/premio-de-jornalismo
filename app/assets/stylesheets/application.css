@@ -128,7 +128,7 @@ main {
     /*border-bottom: 4px solid #159098;*/
 }
 .section-title h1.green{
-    border-bottom: 4px solid #159098;
+    border-bottom: 4px solid #42A531;
 }
 
 .section-title i {
@@ -190,6 +190,9 @@ main {
     height: 60vh;
     text-align: center;
 }
+.normalize{
+    font-size: 25px !important;
+}
 /* === END SECTIONS ===*/
 
 
@@ -241,3 +244,17 @@ main {
 }
 /* === SECTION CATEGORIES === */
 
+/* === FORM === */
+.form-control:focus {
+    border-color: #42A531;
+}
+.btn-white{
+    background: #F2F2F2;
+    color: #42A531;
+    border-radius: 3px;
+}
+.btn-white:hover{
+    color: #42A531;
+    border-bottom: 1px solid #42A531;
+}
+/* === END FORM === */
