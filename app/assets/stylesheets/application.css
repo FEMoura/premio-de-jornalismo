@@ -41,45 +41,39 @@ main {
     padding: 0;
     height: 60vh;
     text-align: center;
+    border-bottom: 1px solid #eaebec;
 }
-.index-honored{
-    background: url('/images/homenageado-mobile.jpg') no-repeat center bottom;
-    background-size: cover;
-    width: 100%;
-    padding: 0;
-    height: 50vh;
-    text-align: center;
+.section-honored {
+    background-color: #fff;
+    text-align: left;
+    border-bottom: 1px solid #eaebec;
+    font-size: 1.2em;
+    padding: 5% 0 5% 0;
 }
-@media(min-width: 320px){
-    .index-honored{
-        height: 95vh;
-    }
-}
-@media(min-width: 992px){
-    .index-honored{
-        height: 50vh;
-    }
-    .index-honored small {
-        font-size: 1em;
-    }
-}
-@media(min-width: 1200px){
-    .index-honored{
-        height: 45vh;
-    }
-    .index-honored small {
-        font-size: 1.2em;
-    }
-}
-.index-honored h2, .index-honored-mobile h2 {
-    font-weight: 900;
+
+.section-honored h2 {
+    font-weight: 500;
     font-style: italic;
-    border-bottom: 4px solid #427ec3;
+    /*border-bottom: 2px solid #427ec3;*/
+    border-bottom: 1px solid #159098;
     padding-bottom: 4px;
     display: inline-flex;
-    font-size: 3rem;
+    font-size: 2em;
     margin-bottom: 20px;
+    margin-top: 0;
 }
+
+.section-honored p {
+    font-weight: 300;
+    font-size: 1.0em;
+    font-style: italic;
+    padding-right: 15px;
+}
+
+.brief-image {
+
+}
+
 
 .banner-shadow {
     background-color: rgba(0, 0, 0, 0.4);
@@ -128,16 +122,17 @@ main {
     font-style: italic;
     padding-bottom: 4px;
     display: inline-flex;
-    font-size: 51px;
-    margin-bottom: 50px;
+    font-size: 3em;
+    margin-bottom: 30px;
     border-bottom: 4px solid #427ec3;
+    /*border-bottom: 4px solid #159098;*/
 }
 .section-title h1.green{
     border-bottom: 4px solid #159098;
 }
 
 .section-title i {
-    font-size: 6.5rem;
+    font-size: 4em;
     display: inline-block;
     vertical-align: middle;
 }
@@ -149,7 +144,7 @@ main {
     border-bottom: 4px solid #427ec3;
     padding-bottom: 4px;
     display: inline-flex;
-    font-size: 35px;
+    font-size: 32em;
     margin-bottom: 20px;
 }
 
@@ -162,7 +157,9 @@ main {
 }
 
 .section-grey {
-    background-color: #f1f1f2;
+    /*background-color: #f1f1f2;*/
+    background-color: #F7F8FA;
+    border-bottom: 1px solid #dadfe3;
     color: #47494d;;
 }
 .section-blue {
