@@ -35,11 +35,12 @@ main {
 /* === SECTIONS ===*/
 /* === BANNER ===*/
 .index-banner {
-    background: url('/images/banner.jpg') no-repeat center top;
+    /*background: url('/images/banner.jpg') no-repeat center top;*/
+    background: url('/images/jornalismo.jpg') no-repeat center top;
     background-size: cover;
     width: 100%;
     padding: 0;
-    height: 60vh;
+    height: 70vh;
     text-align: center;
     border-bottom: 1px solid #eaebec;
 }
