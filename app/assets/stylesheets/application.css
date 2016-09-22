@@ -42,6 +42,40 @@ main {
     height: 60vh;
     text-align: center;
 }
+.index-honored{
+    background: url('/images/homenageado.jpg') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    padding: 0;
+    height: 60vh;
+    text-align: center;
+}
+.index-honored-mobile{
+    background: url('/images/homenageado-mobile.jpg') no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    padding: 0;
+    height: 60vh;
+    text-align: center;
+}
+.index-honored h2, .index-honored-mobile h2 {
+    font-weight: 900;
+    font-style: italic;
+    border-bottom: 4px solid #427ec3;
+    padding-bottom: 4px;
+    display: inline-flex;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.index-honored small {
+    font-size: 1em;
+}
+.index-honored-mobile small{
+    font-size: 0.7em;
+}
+.honored-text{
+    padding-top: 5rem;
+}
 
 .banner-shadow {
     background-color: rgba(0, 0, 0, 0.4);
