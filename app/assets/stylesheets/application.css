@@ -50,13 +50,23 @@ main {
     height: 60vh;
     text-align: center;
 }
-.index-honored-mobile{
-    background: url('/images/homenageado-mobile.jpg') no-repeat center top;
-    background-size: cover;
-    width: 100%;
-    padding: 0;
-    height: 60vh;
-    text-align: center;
+@media(min-width: 320px){
+    .index-honored{
+        background: url('/images/homenageado-mobile.jpg') no-repeat center top;
+        background-size: cover;
+    }
+    .index-honored small{
+        font-size: 0.7em;
+    }
+}
+@media(min-width: 992px){
+    .index-honored{
+        background: url('/images/homenageado.jpg') no-repeat center top;
+        background-size: cover;
+    }
+    .index-honored small {
+        font-size: 1em;
+    }
 }
 .index-honored h2, .index-honored-mobile h2 {
     font-weight: 900;
@@ -66,12 +76,6 @@ main {
     display: inline-flex;
     font-size: 3rem;
     margin-bottom: 20px;
-}
-.index-honored small {
-    font-size: 1em;
-}
-.index-honored-mobile small{
-    font-size: 0.7em;
 }
 .honored-text{
     padding-top: 5rem;
@@ -128,6 +132,9 @@ main {
     margin-bottom: 50px;
     border-bottom: 4px solid #427ec3;
 }
+.section-title h1.green{
+    border-bottom: 4px solid #159098;
+}
 
 .section-title i {
     font-size: 6.5rem;
@@ -157,6 +164,10 @@ main {
 .section-grey {
     background-color: #f1f1f2;
     color: #47494d;;
+}
+.section-blue {
+    background-color: #007DC3;
+    color: #F2F2F2;
 }
 .p-bold{
     font-style: normal;
