@@ -245,6 +245,10 @@ main {
     position: relative;
     top: -35px;
 }
+.vertical-bar{
+    position: relative;
+    left: 50%;
+}
 /* === SECTION CATEGORIES === */
 
 /* === FORM === */
