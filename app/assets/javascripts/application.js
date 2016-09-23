@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+//= require scroll-page
 
 $(document).ready(function(){
     $window = $(window);
