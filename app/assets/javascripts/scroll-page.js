@@ -7,14 +7,8 @@
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 800, 'easeInOutExpo');
+        }, 500);
         event.preventDefault();
-    });
-
-    // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
     });
 
     // Closes the Responsive Menu on Menu Item Click
@@ -22,12 +16,12 @@
         $('.navbar-toggle:visible').click();
     });
 
-    // Offset for Main Navigation
-    $('#main-nav').affix({
-        offset: {
-            top: 100
-        }
-    })
+    //// Offset for Main Navigation
+    //$('#main-nav').affix({
+    //    offset: {
+    //        top: 100
+    //    }
+    //})
 
     // Initialize and Configure Scroll Reveal Animation
     window.sr = ScrollReveal();

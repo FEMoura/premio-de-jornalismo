@@ -221,7 +221,7 @@ main {
 #main-nav {
     /*background-color: #f1f1f2;*/
     background-color: transparent;
-    border-color: rgba(231, 231, 231, 0.43);;
+    border-color: rgba(231, 231, 231, 0.43);
     /*border-color: #9ea6ad;*/
     border-width: 0px 0 1px;
     min-height: 90px;
@@ -249,6 +249,7 @@ main {
 
 .navbar-scrolled {
     background-color: #fff !important;
+    border-bottom: 2px solid #dadfe3;
 }
 
 .navbar-scrolled .navbar-nav>li>a {
