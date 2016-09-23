@@ -14,6 +14,11 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
+
+//= require cbpAnimatedHeader
+
+//= require jquery.easing.min
+//= require scrollreveal/scrollreveal.min
 //= require scroll-page
 
 $(document).ready(function(){

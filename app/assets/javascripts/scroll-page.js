@@ -7,7 +7,7 @@
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
+        }, 800, 'easeInOutExpo');
         event.preventDefault();
     });
 
@@ -23,7 +23,7 @@
     });
 
     // Offset for Main Navigation
-    $('#mainNav').affix({
+    $('#main-nav').affix({
         offset: {
             top: 100
         }

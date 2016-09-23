@@ -86,10 +86,6 @@ main {
     padding-right: 15px;
 }
 
-.brief-image {
-
-}
-
 
 .banner-shadow {
     background-color: rgba(0, 0, 0, 0.4);
@@ -198,7 +194,7 @@ main {
 .space-correction-who-does{
     padding-bottom: 20px;
 }
-.books{
+.books {
     background: url('/images/bg-book.jpg') no-repeat center top;
     background-size: cover;
     width: 100%;
@@ -211,9 +207,17 @@ main {
 }
 /* === END SECTIONS ===*/
 
-
-
 /* === NAVS === */
+
+.navbar-brand {
+    display: none;
+    -webkit-transition: all 0.50s;
+    -moz-transition: all 0.50s;
+    transition: all 0.50s;
+    padding: 5px 15px;
+}
+
+
 #main-nav {
     /*background-color: #f1f1f2;*/
     background-color: transparent;
@@ -234,7 +238,22 @@ main {
 #menu {
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 20.5px;
+    margin-top: 20px;
+}
+
+.navbar-default {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.navbar-scrolled {
+    background-color: #fff !important;
+}
+
+.navbar-scrolled .navbar-nav>li>a {
+    color: #47494d !important;
+    /*color: #f1f1f2;*/
 }
 
 .navbar-default .navbar-nav>li>a {
