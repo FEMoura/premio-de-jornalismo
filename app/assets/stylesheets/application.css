@@ -44,6 +44,23 @@ main {
     text-align: center;
     border-bottom: 1px solid #eaebec;
 }
+.filter-white{
+    width: 100%;
+    height: 30vh;
+    background: rgba(241, 241, 242, 0.85);
+    position: relative;
+    top: 20vh;
+}
+.black-filter{
+    width: 100%;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.45);
+    position: relative;
+}
+.filter-white img{
+    padding-top: 2vh;
+}
+
 .section-honored {
     background-color: #fff;
     text-align: left;
