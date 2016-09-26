@@ -65,7 +65,6 @@ main {
         height: 30vh;
     }
 }
-
 .period{
     width: 100%;
     position: absolute;
@@ -73,8 +72,14 @@ main {
     color: #f1f1f2;
 }
 .period p{
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-size: 2em;
+}
+@media (min-width: 768px){
+    .period p{
+        margin-bottom: 2em;
+        font-size: 2em;
+    }
 }
 
 .section-honored {
