@@ -63,6 +63,7 @@ main {
 @media (min-width: 768px){
     .logo-banner{
         height: 30vh;
+        width: auto;
     }
 }
 .period{
