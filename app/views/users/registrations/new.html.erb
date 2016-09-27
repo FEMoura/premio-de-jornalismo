@@ -1,0 +1,60 @@
+<h2>Sign up USERS/REISTRATIONS</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <div class="row">
+        <div class="col-md-5">
+          <%= f.input :name %>
+        </div>
+        <div class="col-md-7">
+          <%= f.input :email %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :password %>
+        </div>
+        <div class="col-md-5">
+          <%= f.input :adress %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :user_type, as: :select, collection: ['Estudante', 'Jornalista'], prompt: "Selecione..." %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <%= f.input :mte %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :cpf %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :rg %>
+        </div>
+        <div class="col-md-3">
+          <%= f.input :gender, as: :select, collection: ['Masculino', 'Feminino'], prompt: "Selecione..." %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :phone %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :city %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :state %>
+        </div>
+      </div>
+      <div class="row">
+
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, 'Registrar' %>
+    </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
