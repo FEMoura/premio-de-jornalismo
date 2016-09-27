@@ -1,0 +1,19 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :cpf %>
+    <%= f.input :rg %>
+    <%= f.input :gender %>
+    <%= f.input :phone %>
+    <%= f.input :mte %>
+    <%= f.input :adress %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
