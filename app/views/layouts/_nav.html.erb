@@ -1,7 +1,7 @@
-<nav id="main-nav" class="navbar navbar-default navbar-fixed-top">
+<nav id="main-nav" class="navbar navbar-default navbar-fixed-top <%= 'navbar-pages' if !current_page?('/') %>">
   <div class="container-fluid">
 
-    <a href="/" class="navbar-brand">
+    <a href="/" class="navbar-brand <%= 'navbar-show' if !current_page?('/') %>">
       <img src="/images/logo.svg" alt="Logo" width="200px">
     </a>
 
