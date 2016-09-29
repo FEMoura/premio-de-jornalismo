@@ -12,6 +12,8 @@ gem 'simple_form'
 
 gem 'devise'
 
+gem 'paperclip', '~> 5.0.0'
+
 gem "therubyracer"
 
 gem "twitter-bootstrap-rails"

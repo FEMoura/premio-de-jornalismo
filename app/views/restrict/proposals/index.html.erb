@@ -1,0 +1,33 @@
+<section class="section-title registration">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Listing Proposals</h1>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Category</th>
+        <th>User</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @proposals.each do |proposal| %>
+          <tr>
+            <td><%= proposal.category %></td>
+            <td><%= proposal.user %></td>
+            <td><%= link_to 'Show', restrict_proposal_path(proposal) %></td>
+            <td><%= link_to 'Edit', edit_restrict_proposal_path(proposal) %></td>
+            <td><%= link_to 'Destroy', restrict_proposal_path(proposal), method: :delete, data: { confirm: 'Tem certeza' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Nova proposta', new_restrict_proposal_path %>
+  </div>
+</section>

@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927134925) do
+ActiveRecord::Schema.define(version: 20160929131134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "proposals", force: :cascade do |t|
+    t.string   "category"
+    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "title"
+    t.string   "vehicle"
+    t.string   "publication_date"
+    t.string   "name_member_1"
+    t.string   "cpf_member_1"
+    t.string   "name_member_2"
+    t.string   "cpf_member_2"
+    t.string   "name_member_3"
+    t.string   "cpf_member_3"
+    t.string   "name_member_4"
+    t.string   "cpf_member_4"
+    t.string   "name_member_5"
+    t.string   "cpf_member_5"
+    t.string   "url"
+  end
+
+  add_index "proposals", ["user_id"], name: "index_proposals_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -39,9 +62,14 @@ ActiveRecord::Schema.define(version: 20160927134925) do
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.string   "user_type"
+    t.string   "archive_file_name"
+    t.string   "archive_content_type"
+    t.integer  "archive_file_size"
+    t.datetime "archive_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "proposals", "users"
 end

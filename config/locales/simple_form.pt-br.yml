@@ -15,6 +15,14 @@ pt-BR:
       defaults:
         password: Senha
         name: Nome
+        adress: Endereço
+        user_type: Profissão
+        gender: Sexo
+        phone: Telefone
+        city: Cidade
+        state: Estado
+        remember_me: Lembrar senha
+        archive: Diploma / Certificados / Declarações
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'

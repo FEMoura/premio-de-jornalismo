@@ -148,7 +148,7 @@ main {
     bottom: 0 !important;
 
 }
-.btn-blue{
+.btn-blue, .btn-green{
     background: #0089cf;
     border: none;
     border-radius: 6px;
@@ -165,9 +165,23 @@ main {
     text-align: center;
     text-decoration: none;
 }
-.btn-blue:hover{
+.btn-blue:hover, .btn-green:hover{
     background: #0091cf;
     color: #f1f1f1;
+}
+.btn-green{
+    background-color: #0db14b;
+}
+.btn-green:hover{
+    background: #0db15a;
+}
+@media (max-width: 375px){
+    .btn-lg{
+        padding: 10px
+    }
+    p.btn-lg{
+        font-size: 1em;
+    }
 }
 /* === END BANNER ===*/
 .one-page-section {
