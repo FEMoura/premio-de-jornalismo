@@ -15,6 +15,7 @@ pt-BR:
       defaults:
         password: Senha
         name: Nome
+        title: Título
         adress: Endereço
         user_type: Profissão
         gender: Sexo
@@ -24,6 +25,18 @@ pt-BR:
         remember_me: Lembrar senha
         archive: Diploma / Certificados / Declarações
       proposal:
+        vehicle: Veiculo
+        publication_date: Data de publicação
+        name_member_1: Nome do participante 1
+        name_member_2: Nome do participante 2
+        name_member_3: Nome do participante 3
+        name_member_4: Nome do participante 4
+        name_member_5: Nome do participante 5
+        cpf_member_1: CPF do participante 1
+        cpf_member_2: CPF do participante 2
+        cpf_member_3: CPF do participante 3
+        cpf_member_4: CPF do participante 4
+        cpf_member_5: CPF do participante 5
         archive: Você deverá fazer upload do material em PDF, imagem, arquivo de som (mp3, wav e wma), ou vídeo (mp4, mpeg, mpg, avi, wmv, flv - não pode ser no formato .vob). Em caso de Web, deve enviar também o endereço (URL) da reportagem.
     # hints:
     #   defaults:
