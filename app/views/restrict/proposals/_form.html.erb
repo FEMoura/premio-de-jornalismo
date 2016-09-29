@@ -1,25 +1,71 @@
 <%= simple_form_for [:restrict, @proposal] do |f| %>
     <%= f.error_notification %>
-
     <div class="form-inputs">
-      <%= f.input :category, as: :select, collection: ['Reportagem de TV', 'Jornalismo impresso / Texto', 'Jornalismo impresso / Imagem', 'Radiojornalismo', 'Webjornalismo (Texto, imagem, vídeo)', 'Reportagem cinematográfica', 'Estudante', 'Categoria Especial do Bicentenário de Alagoas'], prompt: "Selecione a categoria..." %>
-      <%= f.input :title%>
-      <%= f.input :vehicle%>
-      <%= f.input :publication_date%>
-      <%= f.input :name_member_1%>
-      <%= f.input :cpf_member_1%>
-      <%= f.input :name_member_2%>
-      <%= f.input :cpf_member_2%>
-      <%= f.input :name_member_3%>
-      <%= f.input :cpf_member_3%>
-      <%= f.input :name_member_4%>
-      <%= f.input :cpf_member_4%>
-      <%= f.input :name_member_5%>
-      <%= f.input :cpf_member_5%>
-      <%= f.input :url%>
+      <div class="row">
+        <br>
+        <h3>Dados do trabalho:</h3>
+        <div class="col-md-4">
+          <%= f.input :category, as: :select, collection: ['Reportagem de TV', 'Jornalismo impresso / Texto', 'Jornalismo impresso / Imagem', 'Radiojornalismo', 'Webjornalismo (Texto, imagem, vídeo)', 'Reportagem cinematográfica', 'Categoria Especial do Bicentenário de Alagoas'], prompt: "Selecione a categoria..." if current_user.user_type == "Jornalista" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <%= f.input :title%>
+        </div>
+        <div class="col-md-5">
+          <%= f.input :vehicle%>
+        </div>
+        <div class="col-md-5">
+          <%= f.input :publication_date%>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <h3>Dados dos demais participantes</h3>
+        <div class="col-md-8">
+          <%= f.input :name_member_1%>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :cpf_member_1%>
+        </div>
+        <div class="col-md-8">
+          <%= f.input :name_member_2%>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :cpf_member_2%>
+        </div>
+        <div class="col-md-8">
+          <%= f.input :name_member_3%>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :cpf_member_3%>
+        </div>
+        <div class="col-md-8">
+          <%= f.input :name_member_4%>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :cpf_member_4%>
+        </div>
+        <div class="col-md-8">
+          <%= f.input :name_member_5%>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :cpf_member_5%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <%= f.input :url%>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.input :archive%>
+        </div>
+      </div>
     </div>
-
+    <br>
     <div class="form-actions">
-      <%= f.button :submit %>
+      <%= f.button :submit, 'Submeter' %>
     </div>
 <% end %>

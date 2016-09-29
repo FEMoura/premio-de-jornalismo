@@ -23,6 +23,8 @@ pt-BR:
         state: Estado
         remember_me: Lembrar senha
         archive: Diploma / Certificados / Declarações
+      proposal:
+        archive: Você deverá fazer upload do material em PDF, imagem, arquivo de som (mp3, wav e wma), ou vídeo (mp4, mpeg, mpg, avi, wmv, flv - não pode ser no formato .vob). Em caso de Web, deve enviar também o endereço (URL) da reportagem.
     # hints:
     #   defaults:
     #     password: 'Mínimo de 8 caracteres.'

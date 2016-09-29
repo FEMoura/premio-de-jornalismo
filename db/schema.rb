@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929131553) do
+ActiveRecord::Schema.define(version: 20160929135045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20160929131553) do
   create_table "proposals", force: :cascade do |t|
     t.string   "category"
     t.integer  "user_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.string   "title"
     t.string   "vehicle"
     t.date     "publication_date"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 20160929131553) do
     t.string   "name_member_5"
     t.string   "cpf_member_5"
     t.string   "url"
+    t.string   "archive_file_name"
+    t.string   "archive_content_type"
+    t.integer  "archive_file_size"
+    t.datetime "archive_updated_at"
   end
 
   add_index "proposals", ["user_id"], name: "index_proposals_on_user_id", using: :btree
