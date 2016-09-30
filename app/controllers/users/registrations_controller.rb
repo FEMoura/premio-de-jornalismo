@@ -1,44 +1,54 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_sign_up_params, :validate_mte, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 
-  # GET /resource/sign_up
+# GET /resource/sign_up
   def new
     super
   end
 
-  # POST /resource
+
+  def validate_mte
+    if params[:user][:user_type]=='Jornalista'
+      if params[:user][:mte]==''
+        redirect_to new_user_registration_path, notice: "MTE Obrigatório para Jornalistas."
+      end
+    end
+  end
+
+# POST /resource
   def create
     super
   end
 
-  # GET /resource/edit
-  # def edit
-  #   super
-  # end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+# GET /resource/edit
+# def edit
+#   super
+# end
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+# PUT /resource
+# def update
+#   super
+# end
 
-  # GET /resource/cancel
-  # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
-  # cancel oauth signing in/up in the middle of the process,
-  # removing all OAuth session data.
-  # def cancel
-  #   super
-  # end
+# DELETE /resource
+# def destroy
+#   super
+# end
+
+# GET /resource/cancel
+# Forces the session data which is usually expired after sign
+# in to be expired now. This is useful if the user wants to
+# cancel oauth signing in/up in the middle of the process,
+# removing all OAuth session data.
+# def cancel
+#   super
+# end
 
   protected
 
-  # If you have extra params to permit, append them to the sanitizer.
+# If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :name, :cpf, :rg, :gender, :phone, :mte, :adress, :user_type, :city, :state, :archive])
   end

@@ -4,6 +4,8 @@ class Restrict::ProposalsController < ApplicationController
   # GET /proposals
   def index
     @proposals = Proposal.all
+    @remaining_submissions = Proposal.remaining_submissions(current_user)
+    @still_remaining_submissions = Proposal.remaining_submissions?(current_user)
   end
 
   # GET /proposals/1
@@ -23,6 +25,9 @@ class Restrict::ProposalsController < ApplicationController
   def create
     new_params = proposal_params
     new_params[:user_id]=current_user.id
+    if Proposal.user_student?(current_user)
+      new_params[:category] = "Estudante"
+    end
     @proposal = Proposal.new(new_params)
     if @proposal.save
       redirect_to restrict_proposal_path(@proposal), notice: 'Proposal was successfully created.'
@@ -54,6 +59,6 @@ class Restrict::ProposalsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def proposal_params
-      params.require(:proposal).permit(:category, :user_id, :title, :vehicle, :publication_date, :name_member_1, :cpf_member_1, :name_member_2, :cpf_member_2, :name_member_3, :cpf_member_3, :name_member_4, :cpf_member_4, :name_member_5, :cpf_member_5, :url)
+      params.require(:proposal).permit(:category, :user_id, :title, :vehicle, :publication_date, :name_member_1, :cpf_member_1, :name_member_2, :cpf_member_2, :name_member_3, :cpf_member_3, :name_member_4, :cpf_member_4, :name_member_5, :cpf_member_5, :url, :archive)
     end
 end
