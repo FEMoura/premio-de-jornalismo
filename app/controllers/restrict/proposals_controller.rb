@@ -1,5 +1,6 @@
 class Restrict::ProposalsController < ApplicationController
   before_action :set_proposal, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /proposals
   def index
