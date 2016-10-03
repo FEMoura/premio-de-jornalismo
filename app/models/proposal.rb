@@ -24,4 +24,9 @@ class Proposal < ActiveRecord::Base
   def self.remaining_submissions?(params)
     true ? remaining_submissions(params) != 0 : false
   end
+
+  def self.there_is_work_in_the_special_category?(params)
+    total = Proposal.where(user_id: params.id).where(category: 'Categoria Especial do Bicentenário de Alagoas').count
+    true ? total>0 : false
+  end
 end

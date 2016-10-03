@@ -5,7 +5,12 @@
         <br>
         <h3>Dados do trabalho:</h3>
         <div class="col-md-4">
-          <%= f.input :category, as: :select, collection: ['Reportagem de TV', 'Jornalismo impresso / Texto', 'Jornalismo impresso / Imagem', 'Radiojornalismo', 'Webjornalismo (Texto, imagem, vídeo)', 'Reportagem cinematográfica', 'Categoria Especial do Bicentenário de Alagoas'], prompt: "Selecione a categoria..." if current_user.user_type == "Jornalista" %>
+          <%= if @there_is_work_in_the_special_category
+                f.input :category, as: :select, collection: ['Reportagem de TV', 'Jornalismo impresso / Texto', 'Jornalismo impresso / Imagem', 'Radiojornalismo', 'Webjornalismo (Texto, imagem, vídeo)', 'Reportagem cinematográfica'], prompt: "Selecione a categoria..." if current_user.user_type == "Jornalista"
+              else
+                f.input :category, as: :select, collection: ['Reportagem de TV', 'Jornalismo impresso / Texto', 'Jornalismo impresso / Imagem', 'Radiojornalismo', 'Webjornalismo (Texto, imagem, vídeo)', 'Reportagem cinematográfica', 'Categoria Especial do Bicentenário de Alagoas'], prompt: "Selecione a categoria..." if current_user.user_type == "Jornalista"
+              end
+          %>
         </div>
       </div>
       <div class="row">

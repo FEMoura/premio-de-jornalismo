@@ -16,6 +16,7 @@ class Restrict::ProposalsController < ApplicationController
   # GET /proposals/new
   def new
     @proposal = Proposal.new
+    @there_is_work_in_the_special_category =  Proposal.there_is_work_in_the_special_category?(current_user)
   end
 
   # GET /proposals/1/edit
