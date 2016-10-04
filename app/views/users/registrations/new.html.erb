@@ -28,12 +28,15 @@
             <div class="col-md-3">
               <%= f.input :mte %>
               <% if notice %>
-                  <div class="alert alert-danger" role="alert"><small class="helper-block"><%= notice %></small></div>
+                  <div class="alert" role="alert"><small class="helper-block"><%= notice %></small></div>
               <% end %>
 
             </div>
             <div class="col-md-3">
               <%= f.input :cpf %>
+              <div id="cpf" class="alert alert-danger hidden" role="alert">
+                <small class="cpf-helper"></small>
+              </div>
             </div>
             <div class="col-md-3">
               <%= f.input :rg %>
@@ -65,3 +68,21 @@
     <% end %>
   </div>
 </section>
+<script src="/CPF.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $('#user_cpf').keyup(function(){
+    if (CPF.validate($('#user_cpf').val()) === true ) {
+        $('#cpf').removeClass('hidden')
+        $('#cpf').removeClass('alert-danger')
+        $('#cpf').addClass('alert-success')
+        $('.cpf-helper').html('CPF válido')
+        $('input[type="submit"]').removeAttr('disabled');
+    }else{
+        $('#cpf').removeClass('hidden')
+        $('#cpf').addClass('alert-success')
+        $('#cpf').addClass('alert-danger')
+        $('.cpf-helper').html('CPF inválido')
+        $('input[type="submit"]').attr('disabled','disabled');
+    }
+  });
+</script>
