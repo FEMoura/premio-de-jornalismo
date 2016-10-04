@@ -4,7 +4,7 @@ class Restrict::ProposalsController < ApplicationController
 
   # GET /proposals
   def index
-    @proposals = Proposal.all
+    @proposals = Proposal.where(user_id: current_user.id).all
     @remaining_submissions = Proposal.remaining_submissions(current_user)
     @still_remaining_submissions = Proposal.remaining_submissions?(current_user)
   end
