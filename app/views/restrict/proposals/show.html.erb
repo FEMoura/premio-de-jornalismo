@@ -1,15 +1,14 @@
 <section class="section-title registration">
   <div class="container">
     <p id="notice"><%= notice %></p>
-
     <p>
-      <strong>Category:</strong>
+      <strong>Categoria:</strong>
       <%= @proposal.category %>
     </p>
 
     <p>
-      <strong>User:</strong>
-      <%= @proposal.user %>
+      <strong>Arquivo:</strong>
+      <a href="<%= @proposal.archive.url %>" target="_blank"><%= @proposal.archive_file_name %></a>
     </p>
   </div>
 </section>

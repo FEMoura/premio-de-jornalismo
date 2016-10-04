@@ -1,12 +1,12 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, :validate_mte, only: [:create]
+  prepend_before_action :logged?
 # before_action :configure_account_update_params, only: [:update]
 
 # GET /resource/sign_up
   def new
     super
   end
-
 
   def validate_mte
     if params[:user][:user_type]=='Jornalista'
@@ -19,6 +19,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # POST /resource
   def create
     super
+  end
+
+  def logged?
+    if !current_user==nil?
+      redirect_to restrict_proposals_path
+    end
   end
 
 
@@ -59,9 +65,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    restrict_proposals_path
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
