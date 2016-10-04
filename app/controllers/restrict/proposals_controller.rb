@@ -32,7 +32,7 @@ class Restrict::ProposalsController < ApplicationController
     end
     @proposal = Proposal.new(new_params)
     if @proposal.save
-      redirect_to restrict_proposal_path(@proposal), notice: 'Proposal was successfully created.'
+      redirect_to restrict_proposal_path(@proposal), notice: 'Proposta enviada com sucesso.'
     else
       render :new
     end
@@ -50,7 +50,7 @@ class Restrict::ProposalsController < ApplicationController
   # DELETE /proposals/1
   def destroy
     @proposal.destroy
-    redirect_to restrict_proposals_url, notice: 'Proposal was successfully destroyed.'
+    redirect_to restrict_proposals_url, notice: 'Proposta excluída com sucesso.'
   end
 
   private
