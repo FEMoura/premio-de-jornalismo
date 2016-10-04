@@ -6,6 +6,10 @@
       <br>
       <br>
       <span>Para submeter seus trabalhos clique em "Nova proposta"</span><br>
+      <br>
+      <% if !current_page?(restrict_proposals_url) %>
+        <a href="<%= restrict_proposals_path %>"><p><i class="fa fa-reply" aria-hidden="true"></i> Voltar ao início</p></a>
+      <% end %>
     </div>
   </div>
 </div>

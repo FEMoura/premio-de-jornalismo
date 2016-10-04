@@ -25,16 +25,20 @@ class Restrict::ProposalsController < ApplicationController
 
   # POST /proposals
   def create
-    new_params = proposal_params
-    new_params[:user_id]=current_user.id
-    if Proposal.user_student?(current_user)
-      new_params[:category] = "Estudante"
-    end
-    @proposal = Proposal.new(new_params)
-    if @proposal.save
-      redirect_to restrict_proposal_path(@proposal), notice: 'Proposta enviada com sucesso.'
+    if Proposal.remaining_submissions?(current_user)
+      new_params = proposal_params
+      new_params[:user_id]=current_user.id
+      if Proposal.user_student?(current_user)
+        new_params[:category] = "Estudante"
+      end
+      @proposal = Proposal.new(new_params)
+      if @proposal.save
+        redirect_to restrict_proposal_path(@proposal), notice: 'Proposta enviada com sucesso.'
+      else
+        render :new
+      end
     else
-      render :new
+      redirect_to restrict_proposals_url, notice: 'Você já submeteu a quantidade limite de trabalhos!'
     end
   end
 

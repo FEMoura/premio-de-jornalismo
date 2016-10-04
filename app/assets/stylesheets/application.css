@@ -382,3 +382,6 @@ main {
 .panel-user a{
     color: #f1f1f2;
 }
+.panel-user i{
+    font-size: 1.8rem;
+}
