@@ -1,6 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
-  prepend_before_action :logged?
+  prepend_before_action :logged?, except: [:destroy]
 
   # GET /resource/sign_in
   def new
