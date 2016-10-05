@@ -12,7 +12,7 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'paperclip', '~> 5.0.0'
+gem 'paperclip', '~> 4.3.6'
 
 gem "therubyracer"
 

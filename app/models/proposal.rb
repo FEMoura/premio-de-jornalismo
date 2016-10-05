@@ -1,6 +1,7 @@
 class Proposal < ActiveRecord::Base
   belongs_to :user
-  has_attached_file :archive, styles: {thumb: "360x240>", medium: "1024x768>"}
+  has_attached_file :archive
+  validates_attachment_content_type :archive, :content_type => ['application/pdf','image/png','image/jpeg','image/jpg', 'audio/mp3','audio/wma','audio/wav','video/mp4','video/mpeg','video/mpg', 'video/avi', 'video/wmv', 'video/flv'], message: "Formato inválido"
   do_not_validate_attachment_file_type :archive
   validates_presence_of :category, :title, :vehicle, :publication_date, :archive
 
