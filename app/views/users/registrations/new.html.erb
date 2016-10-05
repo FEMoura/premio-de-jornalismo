@@ -33,7 +33,7 @@
 
             </div>
             <div class="col-md-3">
-              <%= f.input :cpf %>
+              <%= f.input :cpf, input_html:{ OnKeyPress: "mascara(this, mcpf);", maxlength: 14} %>
               <div id="cpf" class="alert alert-danger hidden" role="alert">
                 <small class="cpf-helper"></small>
               </div>

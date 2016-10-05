@@ -20,6 +20,7 @@
 //= require jquery.easing.min
 //= require scrollreveal/scrollreveal.min
 //= require scroll-page
+//= require masks
 
 $(document).ready(function(){
     $window = $(window);
