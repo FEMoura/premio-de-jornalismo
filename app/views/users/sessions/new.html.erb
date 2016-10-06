@@ -12,6 +12,7 @@
               <%= f.input :password, required: false %>
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
             </div>
+            <%= render "users/shared/links" %>
 
             <div class="form-actions">
               <%= f.button :submit, "Logar" %>
