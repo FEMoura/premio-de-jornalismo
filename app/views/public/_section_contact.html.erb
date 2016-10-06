@@ -1,4 +1,14 @@
-<section class="one-page-section section-blue">
+<% if !(notice==nil) %>
+    <script>
+        toastr.success('<%= notice %>', 'Mensagem', { closeButton: true, progressBar: true});
+    </script>
+<% end %>
+<% if alert %>
+    <script>
+        toastr.error('<%= alert %>', 'Erro', { closeButton: true, progressBar: true});
+    </script>
+<% end %>
+<section class="one-page-section section-blue" id="contact">
   <div class="container">
     <div class="row">
       <div class="col-md-5">
@@ -21,14 +31,23 @@
       <div class="col-md-5">
         <div class="section-title">
           <h1 class="green">Contato</h1>
-          <form action="#">
-            <input type="text" placeholder="Nome" class="form-control">
-            <br>
-            <input type="text" placeholder="Email" class="form-control">
-            <br>
-            <textarea placeholder="Mensagem" class="form-control"></textarea><br>
-            <input type="submit" class="btn btn-white pull-right">
-          </form>
+          <% contact = Contact.new %>
+          <% if @contact %>
+              <% contact.name = @contact[:name] %>
+              <% contact.email = @contact[:email] %>
+              <% contact.message = @contact[:message] %>
+          <% end %>
+          <%= simple_form_for(contact) do |f| %>
+              <%= f.error_notification %>
+              <div class="form-input">
+                <%= f.input :name, label: 'Nome' %>
+                <%= f.input :email, label: 'Email' %>
+                <%= f.input :message, label: 'Mensagem' %>
+              </div>
+              <div class="form-action">
+                <%= f.button :submit, class: "btn btn-white pull-right" %>
+              </div>
+          <% end %>
         </div>
       </div>
     </div>

@@ -221,6 +221,8 @@ pt-BR:
       user:
         create: 'Novo %{model}'
         update: 'Salvar'
+      contact:
+        create: 'Salvar'    
 
   views:
     pagination:
