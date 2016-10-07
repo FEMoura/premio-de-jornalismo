@@ -28,3 +28,6 @@ group :development do
 
   gem 'start'
 end
+
+# Use config gem for environment settings such as email address
+gem 'config', '~> 1.0.0'

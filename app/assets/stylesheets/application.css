@@ -13,6 +13,7 @@
  *= require bootstrap_and_overrides
  *= require font-icon
  *= require parallax
+ *= require toastr
  *= require_self
  */
 
