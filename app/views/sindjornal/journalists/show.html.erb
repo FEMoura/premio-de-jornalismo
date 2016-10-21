@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @journalist.name %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @journalist.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_journalist_path(@journalist) %> |
+<%= link_to 'Back', journalists_path %>

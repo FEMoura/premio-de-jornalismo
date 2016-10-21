@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Journalists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cpf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @journalists.each do |journalist| %>
+      <tr>
+        <td><%= journalist.name %></td>
+        <td><%= journalist.cpf %></td>
+        <td><%= link_to 'Show', sindjornal_journalist_path(journalist) %></td>
+        <td><%= link_to 'Edit', edit_sindjornal_journalist_path(journalist) %></td>
+        <td><%= link_to 'Destroy', sindjornal_journalist_path(journalist), method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Journalist', new_sindjornal_journalist_path %>
