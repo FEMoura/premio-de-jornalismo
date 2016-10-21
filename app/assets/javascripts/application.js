@@ -22,6 +22,7 @@
 //= require scrollreveal/scrollreveal.min
 //= require scroll-page
 //= require masks
+//= require smart_listing
 
 $(document).ready(function(){
     $window = $(window);

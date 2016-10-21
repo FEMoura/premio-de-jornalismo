@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require twitter-bootstrap-static/sprites
  *= require font-icon
  *= require parallax
  *= require toastr

@@ -1,29 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Journalists</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cpf</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @journalists.each do |journalist| %>
-      <tr>
-        <td><%= journalist.name %></td>
-        <td><%= journalist.cpf %></td>
-        <td><%= link_to 'Show', sindjornal_journalist_path(journalist) %></td>
-        <td><%= link_to 'Edit', edit_sindjornal_journalist_path(journalist) %></td>
-        <td><%= link_to 'Destroy', sindjornal_journalist_path(journalist), method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-      </tr>
+<section class="section-title registration">
+  <div class="container">
+    <%= smart_listing_controls_for(:journalists, {class: "form-inline"}) do %>
+        <div class="form-group filter input-append input-group">
+          <input name="filter" id="filter" type="text" class="search form-control", placeholder="Buscar..." autocomplete="off">
+            <span class="input-group-btn">
+                 <button class="btn btn-primary disabled" type="submit">
+                   <span class="glyphicon glyphicon-search"></span>
+                 </button>
+            </span>
+        </div>
+        <br>
+        <%= smart_listing_render :journalists %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Journalist', new_sindjornal_journalist_path %>
+    <%= link_to 'Inserir novo', new_sindjornal_journalist_path, class: 'btn btn-primary' %>
+  </div>
+</section>

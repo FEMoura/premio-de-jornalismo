@@ -1,11 +1,20 @@
 class Sindjornal::JournalistsController < ApplicationController
   before_action :set_journalist, only: [:show, :edit, :update, :destroy]
+  include SmartListing::Helper::ControllerExtensions
+  helper  SmartListing::Helper
 
   layout "layouts/sindjornal"
 
   # GET /journalists
   def index
-    @journalists = Journalist.all
+    journalists_scope = Journalist.all if params[:filter].to_s.empty?
+    unless params[:filter].to_s.empty?
+      attribute = "%#{params[:filter].downcase}%"
+      journalists_scope = Journalist.where('lower(name) LIKE ? OR lower(cpf) LIKE ?', attribute, attribute)
+    end
+
+    @journalists = smart_listing_create :journalists, journalists_scope, partial: 'sindjornal/journalists/list',
+                                       default_sort: {name: 'asc'}
   end
 
   # GET /journalists/1
@@ -26,7 +35,7 @@ class Sindjornal::JournalistsController < ApplicationController
     @journalist = Journalist.new(journalist_params)
 
     if @journalist.save
-      redirect_to @journalist, notice: 'Journalist was successfully created.'
+      redirect_to @journalist, notice: 'Jornalista criado com sucesso.'
     else
       render :new
     end
@@ -35,7 +44,7 @@ class Sindjornal::JournalistsController < ApplicationController
   # PATCH/PUT /journalists/1
   def update
     if @journalist.update(journalist_params)
-      redirect_to @journalist, notice: 'Journalist was successfully updated.'
+      redirect_to sindjornal_journalists_path, notice: 'Jornalista atualizado com sucesso.'
     else
       render :edit
     end
@@ -44,7 +53,7 @@ class Sindjornal::JournalistsController < ApplicationController
   # DELETE /journalists/1
   def destroy
     @journalist.destroy
-    redirect_to journalists_url, notice: 'Journalist was successfully destroyed.'
+    redirect_to sindjornal_journalists_path, notice: 'Jornalista excluido com sucesso.'
   end
 
   private
