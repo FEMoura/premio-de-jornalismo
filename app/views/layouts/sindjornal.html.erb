@@ -27,9 +27,17 @@
 
 <%= render partial: 'layouts/sindjornal_nav' %>
 
-<main id="content">
-  <%= yield %>
-</main>
+<% if current_user.user_type=='Sindjornal' %>
+    <main id="content">
+      <%= yield %>
+    </main>
+<% else %>
+    <section class="section-title registration">
+      <div class="container">
+        <p>Não autorizado</p>
+      </div>
+    </section>
+<% end %>
 
 
 

@@ -1,5 +1,6 @@
 class Sindjornal::JournalistsController < ApplicationController
   before_action :set_journalist, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   include SmartListing::Helper::ControllerExtensions
   helper  SmartListing::Helper
 
