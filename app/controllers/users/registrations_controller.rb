@@ -1,5 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, :validate_mte, only: [:create]
+  before_action :update_resource, :validate_mte, only: [:update]
   prepend_before_action :logged?
 # before_action :configure_account_update_params, only: [:update]
 
@@ -34,9 +35,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # end
 
 # PUT /resource
-# def update
-#   super
-# end
+def update
+  super
+end
 
 # DELETE /resource
 # def destroy
@@ -53,6 +54,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # end
 
   protected
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
 
 # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
