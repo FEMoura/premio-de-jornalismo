@@ -1,8 +1,9 @@
 class Sindjornal::JournalistsController < ApplicationController
   before_action :set_journalist, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :verify_journalist
   include SmartListing::Helper::ControllerExtensions
   helper  SmartListing::Helper
+  require "cpf_cnpj"
 
   layout "layouts/sindjornal"
 
@@ -55,6 +56,16 @@ class Sindjornal::JournalistsController < ApplicationController
   def destroy
     @journalist.destroy
     redirect_to sindjornal_journalists_path, notice: 'Jornalista excluido com sucesso.'
+  end
+
+  def verify_journalist
+    params[:cpf] = cpf = CPF.new(params[:cpf]).formatted
+    journalist = Journalist.find_by_cpf(params[:cpf])
+    if journalist.nil?
+      render json: {msg: 'Não listado'}, status: 401
+    else
+      render json: {msg: 'Autorizado'}
+    end
   end
 
   private

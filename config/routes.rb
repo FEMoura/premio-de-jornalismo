@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     root 'proposals#index'
   end
   root to: 'public#index'
+  get '/verify_journalist/:cpf', to: 'sindjornal/journalists#verify_journalist'
 
 end

@@ -34,3 +34,4 @@ gem 'config', '~> 1.0.0'
 
 # Listing and updatate lists with Ajax easily
 gem 'smart_listing', '1.1.2'
+gem "cpf_cnpj"

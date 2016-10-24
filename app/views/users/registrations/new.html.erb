@@ -70,19 +70,35 @@
 </section>
 <script src="/CPF.js"></script>
 <script type="text/javascript" charset="utf-8">
-  $('#user_cpf').keyup(function(){
-    if (CPF.validate($('#user_cpf').val()) === true ) {
-        $('#cpf').removeClass('hidden')
-        $('#cpf').removeClass('alert-danger')
-        $('#cpf').addClass('alert-success')
-        $('.cpf-helper').html('CPF válido')
-        $('input[type="submit"]').removeAttr('disabled');
-    }else{
-        $('#cpf').removeClass('hidden')
-        $('#cpf').addClass('alert-success')
-        $('#cpf').addClass('alert-danger')
-        $('.cpf-helper').html('CPF inválido')
-        $('input[type="submit"]').attr('disabled','disabled');
-    }
-  });
+    $('#user_cpf').keyup(function(){
+        if (CPF.validate($('#user_cpf').val()) === true ) {
+            $('#cpf').removeClass('hidden')
+            $('#cpf').removeClass('alert-danger')
+            $('#cpf').addClass('alert-success')
+            $('.cpf-helper').html('CPF válido')
+            $('input[type="submit"]').removeAttr('disabled');
+            var cpf = CPF.format($('#user_cpf').val(), 'digits');
+            $.ajax({
+                dataType: "json",
+                url: "/verify_journalist/"+cpf,
+                beforeSend: function( xhr ) {
+                    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                }
+            })
+                    .fail(function(data){
+                        $('#cpf').addClass('alert-danger')
+                        $('.cpf-helper').html('Aconteceu um erro, produre o SindJornal para maiores informações');
+                        $('input[type="submit"]').attr('disabled','disabled');
+                    })
+                    .done(function( data ) {
+                        console.log(data)
+                    });
+        }else{
+            $('#cpf').removeClass('hidden')
+            $('#cpf').addClass('alert-success')
+            $('#cpf').addClass('alert-danger')
+            $('.cpf-helper').html('CPF inválido')
+            $('input[type="submit"]').attr('disabled','disabled');
+        }
+    });
 </script>
