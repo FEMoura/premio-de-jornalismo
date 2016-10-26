@@ -17,4 +17,28 @@
     </div>
   </div>
 
+<div class="hidden-md hidden-lg hidden-sm pull-right">
+  <a class="btn-menu btn-lg">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 </nav>
+<!-- MOBILE SIDE MENU-->
+<div id="side-nav" class="nav-main">
+  <!-- close menu -->
+  <a class="close-menu" title="Fechar">X</a>
+  <!-- end close menu -->
+  <!-- nav -->
+  <nav role="navigation">
+    <ul class="menu">
+      <li><a href="<%= '/' if !current_page?('/') %>#about" class="page-scroll"><i class="icon-premio"></i> <span> O Prêmio</span></a></li>
+      <li><a href="<%= '/' if !current_page?('/') %>#honored" class="page-scroll"><i class="icon-especial"></i> <span> O Homenageado</span></a></li>
+      <li><a href="<%= '/' if !current_page?('/') %>#categories" class="page-scroll"><i class="icon-categoria"></i> <span> Categorias</span></a></li>
+      <li><a href="/arquivos/regulamento.pdf" class="page-scroll" target="_blank"><i class="icon-regulamento"></i> <span> Regulamento</span></a></li>
+      <li><a href="<%= '/' if !current_page?('/') %>#awards" class="page-scroll"><i class="icon-premiacao"></i> <span> Premiação</span></a></li>
+      <li><a href="<%= '/' if !current_page?('/') %>#who-does" class="page-scroll"><i class="icon-realizacao"></i> <span> Realização</span></a></li>
+    </ul>
+  </nav>
+  <!-- nav -->
+
+</div>

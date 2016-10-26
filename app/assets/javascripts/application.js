@@ -25,6 +25,15 @@
 //= require smart_listing
 
 $(document).ready(function(){
+    // NAV
+    $('.btn-menu').on('click', function() {
+        $('#side-nav').addClass('active');
+    });
+    $('.close-menu').on('click', function() {
+        $('#side-nav').removeClass('active');
+    });
+    // END NAV
+
     $window = $(window);
     $('div[data-type="background"]').each(function(){
         var $scroll = $(this);
