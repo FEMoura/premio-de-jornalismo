@@ -1,0 +1,17 @@
+<section class="section-title registration">
+  <div class="container">
+    <%= smart_listing_controls_for(:journalists, {class: "form-inline"}) do %>
+        <div class="form-group filter input-append input-group">
+          <input name="filter" id="filter" type="text" class="search form-control", placeholder="Buscar..." autocomplete="off">
+            <span class="input-group-btn">
+                 <button class="btn btn-primary disabled" type="submit">
+                   <span class="glyphicon glyphicon-search"></span>
+                 </button>
+            </span>
+        </div>
+        <br>
+        <%= smart_listing_render :journalists %>
+    <% end %>
+    <%= link_to 'Inserir novo', new_sindjornal_journalist_path, class: 'btn btn-primary' %>
+  </div>
+</section>

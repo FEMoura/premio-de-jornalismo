@@ -11,13 +11,113 @@
  * file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require twitter-bootstrap-static/sprites
  *= require font-icon
  *= require parallax
  *= require toastr
  *= require_self
  */
+.nav-main.active {
+    left: 0;
+}
+.btn-menu{
+    color: #f1f1f2;
+    font-size: 2em;
+}
+.btn-menu:hover{
+    color: #CCCCCC;
+    font-size: 2em;
+}
 
+.nav-main {
+    width: 315px;
+    min-height: 490px;
+    padding-top: 1%;
+    background: #007DC3;
+    position: fixed;
+    left: -24em;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 10000;
+    height: 100%;
+    transition: all 0.3s;
+}
+.side-logo-menu-position {
+    position: absolute;
+}
+.side-logo-menu {
+    font-family: 'Open Sans' !important;
+    font-style: normal;
+    font-weight: 600;
+    top: -145px;
+    left: 20%;
+    min-width: 100%;
+}
+@media( min-width: 768px) {
+    .side-logo-menu {
+        left: 27%;
+    }
+}
+@media( min-width: 992px) {
+    .side-logo-menu {
+        left: 20%;
+    }
+}
+.close-menu {
+    font-size: 1em;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    padding: 2% 3%;
 
+}
+
+.nav-main .menu {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    display: block;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.menu span {
+    margin-left: 15px;
+}
+.menu i {
+    font-size: 16px;
+}
+a {
+    outline: none !important;
+    text-decoration: none;
+}
+.nav-main .menu a:hover {
+    background: white;
+    color: #015e83;;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus,.menu span:active, .menu span:focus{
+    color: #015e83 !important;
+}
+
+.menu .active {
+    color: #015e83 !important;
+    background: white;
+}
+.menu .active span {
+    color: #015e83 !important;
+}
+/* === END SIDE NAV ===*/
 /* === CONTAINERS === */
 body {
     font-family: 'Raleway', sans-serif;
@@ -47,10 +147,10 @@ main {
 }
 .filter-white{
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     background: rgba(241, 241, 242, 0.85);
     position: relative;
-    top: 35vh;
+    top: 15vh;
 }
 .black-filter{
     width: 100%;
@@ -62,24 +162,30 @@ main {
     width: 100vw;
 }
 @media (min-width: 768px){
+    .filter-white{
+        top: 35vh;
+    }
     .logo-banner{
-        height: 30vh;
+        height: 35vh;
         width: auto;
     }
 }
 .period{
     width: 100%;
     position: absolute;
-    top: 70vh;
+    top: 53vh;
     color: #f1f1f2;
 }
 .period p{
-    margin-bottom: 1em;
+    margin-bottom: 0em;
     font-size: 2em;
 }
 @media (min-width: 768px){
+    .period{
+        top: 73vh;
+    }
     .period p{
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         font-size: 2em;
     }
 }
@@ -346,13 +452,13 @@ main {
 /* === SECTION CATEGORIES === */
 .categories i{
     color: #007DC3;
-    font-size: 10em;
+    font-size: 6em;
 }
 .categories span{
     font-weight: 900;
     color: #9EA6AD;
     position: relative;
-    top: -35px;
+    top: -30px;
 }
 .vertical-bar{
     position: relative;
@@ -385,4 +491,14 @@ main {
 }
 .panel-user i{
     font-size: 1.8rem;
+}
+.btn-fix{
+    width: 176.86px;
+    font-size: 1.5em !important;
+}
+.brief-image{
+    padding-top: 9em;
+}
+.img-responsive-70{
+    max-width: 70%;
 }

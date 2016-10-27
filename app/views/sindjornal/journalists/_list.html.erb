@@ -1,0 +1,28 @@
+<%- unless smart_listing.empty? %>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+      <tr>
+        <th><%= smart_listing.sortable "Name", :name %></th>
+        <th><%= smart_listing.sortable "CPF", :cpf %></th>
+        <th>Ação</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% smart_listing.collection.each do |journalist| %>
+          <tr>
+            <td><%= journalist.name %></td>
+            <td><%= journalist.cpf %></td>
+            <td><%= link_to 'Editar', edit_sindjornal_journalist_path(journalist), class: 'btn btn-primary btn-xs' %>
+              <%= link_to 'Apagar', sindjornal_journalist_path(journalist), method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-danger btn-xs' %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%= smart_listing.paginate %>
+    <%= smart_listing.pagination_per_page_links %>
+<%- else %>
+    <p class="warning text-center">
+      Nada encontrado.
+    </p>
+<% end %>

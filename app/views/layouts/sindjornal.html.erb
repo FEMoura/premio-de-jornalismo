@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prêmio de Jornalismo científico - José Marques de Melo - Secti - Alagoas</title>
+  <title>Prêmio de Jornalismo</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <meta name="description" content="O Prêmio de jornalismo científico busca incentivar a produção jornalística de ciência e tecnologia em alagoas." />
+  <meta name="description" content="O Prêmio busca incentivar a produção jornalística de ciência e tecnologia." />
   <meta name="keywords" content="prêmio, jornalismo, secti, ciência e tecnologia"/>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -25,20 +25,22 @@
 <body>
 
 
-<%= render partial: 'layouts/nav' %>
+<%= render partial: 'layouts/sindjornal_nav' %>
 
-<main id="content">
-  <%= yield %>
-</main>
+<% if current_user.user_type=='Sindjornal' %>
+    <main id="content">
+      <%= yield %>
+    </main>
+<% else %>
+    <section class="section-title registration">
+      <div class="container">
+        <p>Não autorizado</p>
+      </div>
+    </section>
+<% end %>
 
 
 
 <%= render partial: 'layouts/footer' %>
-<script src="//api.handtalk.me/plugin/latest/handtalk.min.js"></script>
-<script>
-    var ht = new HT({
-        token: "c80995aadbe81ed67113f251a16e4bb9"
-    });
-</script>
 </body>
 </html>
