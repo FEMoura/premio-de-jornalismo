@@ -500,7 +500,8 @@ main {
     font-size: 1.5em !important;
 }
 .brief-image{
-    padding-top: 9em;
+    margin-top: 9em !important;
+    height: 63vh !important;
 }
 .img-responsive-70{
     max-width: 70%;
