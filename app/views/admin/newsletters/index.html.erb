@@ -1,0 +1,25 @@
+<section class="registration">
+  <div class="container">
+      <div class="section-title">
+        <h1>Emails - Newsletter</h1> <br>
+        <small>Quantidade: <%= @newsletters.count %></small>
+      </div>
+    <br>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @newsletters.each do |newsletter| %>
+          <tr>
+            <td><%= newsletter.email %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+

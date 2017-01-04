@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     root 'journalists#index'
     resources :journalists
   end
+  namespace :admin do
+    resources :newsletters
+    root 'newsletters#index'
+  end
   namespace :restrict do
     devise_scope :user do
       authenticated :user do
