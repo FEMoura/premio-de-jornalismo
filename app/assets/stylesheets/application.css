@@ -15,6 +15,9 @@
  *= require font-icon
  *= require parallax
  *= require toastr
+ *= require gallery/blueimp-gallery.min.css
+ *= require gallery/blueimp-gallery-video
+ *= require galleries
  *= require_self
  */
 .nav-main.active {

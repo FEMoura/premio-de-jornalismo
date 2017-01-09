@@ -16,6 +16,9 @@
 //= require bootstrap
 //= require toastr
 
+//= require gallery/blueimp-helper
+//= require gallery/blueimp-gallery.min.js
+//= require galleries
 //= require cbpAnimatedHeader
 
 //= require jquery.easing.min
@@ -23,6 +26,7 @@
 //= require scroll-page
 //= require masks
 //= require smart_listing
+//= require galery-modal
 
 $(document).ready(function(){
     // NAV
@@ -45,24 +49,24 @@ $(document).ready(function(){
     });
 
     // Get the modal
-    var modal = document.getElementById('myModal');
+    //var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-    var img = document.getElementById('myImg');
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
+//    var img = document.getElementById('myImg');
+//    var modalImg = document.getElementById("img01");
+//    var captionText = document.getElementById("caption");
+//
+//        modal.style.display = "block";
+//        modalImg.src = img.src;
+//        captionText.innerHTML = img.alt;
 
 // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+//    var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
+//    span.onclick = function() {
+//        modal.style.display = "none";
+//    }
 
 
 });
