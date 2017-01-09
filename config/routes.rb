@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     root 'proposals#index'
   end
   root to: 'public#index'
+  get '/capacitacao/:training_id', to: 'public#training'
   get '/verify_journalist/:cpf', to: 'sindjornal/journalists#verify_journalist'
 
 end
