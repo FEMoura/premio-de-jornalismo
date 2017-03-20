@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-11 col-md-offset-1 text-justify">
-        <div class="section-title">
-          <h1>Capacitação</h1>
-        </div>
         <% if @training == "1" %>
+            <div class="section-title">
+              <h1>1ª Capacitação</h1>
+            </div>
             <p>
               A Secretaria de Estado da Ciência, Tecnologia e Inovação (Secti), em parceria com a Fundação de Amparo à Pesquisa de Alagoas (Fapeal), o Maceió Shopping e o Sindicato dos Jornalistas de Alagoas (SindJornal) promoveram gratuitamente o Curso de Capacitação em Jornalismo Científico no dia 26 de novembro de 2016 no cinema Kinoplex do Maceió Shopping.
             </p>
@@ -38,6 +38,53 @@
               </div>
             </div>
         <% else %>
+            <div class="section-title">
+              <h1>2ª Capacitação</h1>
+            </div>
+            <p>
+              Ciência e tecnologia em pauta. A Secretaria de Estado da Ciência, Tecnologia e Inovação (Secti) promoveu no dia 11 deste mês a segunda capacitação em Jornalismo Científico. A ação faz parte da programação do Prêmio José Marques de Melo e aconteceu das 8h30 às 12h, na sala do cinema Kinoplex, no Maceió Shopping, no bairro da Mangabeiras.
+            </p>
+            <p>
+              Neste segundo encontro, estudantes e profissionais de jornalismo tiveram a oportunidade de “colocar a mão na massa” com um curso sobre práticas e técnicas e entender o cenário do jornalismo científico em Alagoas. Os cursos foram ministrados pelo jornalista e professor doutor da Universidade de São Paulo (USP) Ricardo Alexino e pela professora da Universidade Federal de Alagoas (Ufal) Magnólia Santos.
+            </p>
+            <p>
+              O Prêmio de Jornalismo Científico José Marques de Melo é uma iniciativa da Secti em parceria com a Fundação de Amparo à Pesquisa de Alagoas (Fapeal), do Sindicato dos Jornalistas de Alagoas (Sindjornal) e do Maceió Shopping. As inscrições para o prêmio já estão abertas e seguem até o dia 31 de maio. Nesta primeira edição, o prêmio conta com oito categorias: jornalismo impresso texto, reportagem de TV, radiojornalismo, webjornalismo, jornalismo impresso imagem, reportagem cinematográfica, estudante e reportagem especial do Bicentenário de Alagoas. A premiação é de R$ 4 mil ao vencedor, nas categorias TV e bicentenário e nas demais categorias. A premiação é de R$ 3 mil para o primeiro colocado, R$ 2,5 mil para o segundo e R$ 1,5 mil para o terceiro. Além disso, tem a categoria estudante com R$ 1mil de premiação.
+            </p>
+            <p>
+              Conheça mais sobre os palestrantes:
+            </p>
+            <p>
+              Ricardo Alexino
+            </p>
+            <p>
+              Professor associado, efetivo e em dedicação exclusiva da Escola de Comunicações e Artes da Universidade de São Paulo (USP). É livre-docente pela Universidade de São Paulo; doutor em Ciências da Comunicação pela USP (2001), onde também fez o mestrado em Ciências da Comunicação (1993). É graduado em Comunicação Social (habilitação Jornalismo). De 1995 a julho de 2009, foi professor efetivo da Universidade Estadual Paulista (Unesp), transferiu-se depois para a USP através de concurso público. De dezembro de 2005 a 2008 foi diretor da Rádio Universitária Unesp (Rádio Unesp-FM), onde enfatizou a divulgação científica e a democratização do conhecimento científico através do Rádio.
+            </p>
+            <p>
+              Realizou estágio/atividade docência na Euskal Herriko Unibertsitatea/Universidad del País Vasco, em Bilbao, Espanha, no Programa de Cooperación Interuniversitaria de la Agencia Española de Cooperación Internacional (AECI), do Ministério de Assuntos Exteriores do Governo Espanhol, através do convênio Intercampus Professores. É líder do Grupo de Pesquisa Midialogia Científica e Especializada (certificado pelo Diretório de Grupos do CNPq).
+            </p>
+            <p>
+              Magnólia Santos
+            </p>
+            <p>
+              Possui graduação em Letras pela Universidade Federal de Pernambuco (1980), graduação em Comunicação Social - Habilitação em Jornalismo pela Universidade Católica de Pernambuco (1983), mestrado em Letras pela Universidade Federal de Pernambuco (1988) e doutorado em Comunicação e Semiótica pela Pontifícia Universidade Católica de São Paulo (1996). Atualmente é professora-adjunta do Curso de Comunicação Social da Universidade Federal de Alagoas. Tem experiência na área de Comunicação, com ênfase em Semiótica, atuando principalmente nos seguintes temas: semiótica, jornalismo digital, jornalismo literário e divulgação científica. Coordenadora da Agência de Notícias Online Ciênci@lagoas/CNPq/UFAL, que faz divulgação cientítifca em Alagoas e na Região Nordestina.
+            </p>
+            <div class="imgs-files">
+              <div class="container-fluid">
+                <div class="row">
+                  <div id="links">
+                    <% $i = 1
+                       while $i < 13  do%>
+                        <div class="col-md-4 col-sm-6">
+                          <a href="/images/capacitacao/2/<%= $i %>.jpg">
+                            <img src="/images/capacitacao/2/<%= $i %>.JPG" class="img-thumbnail" alt="">
+                          </a>
+                        </div>
+                        <% $i +=1 %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
         <% end %>
       </div>
     </div>
