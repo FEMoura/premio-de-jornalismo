@@ -1,0 +1,44 @@
+<section class="registration">
+  <p id="notice"><%= notice %></p>
+
+  <div class="container">
+  <h2 class="sub-header">Lista de Usuários</h2>
+  <table class=" table">
+  <div class="table-responsive">
+    <div class="table table-striped">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>RG</th>
+        <th>Sexo</th>
+        <th>Telefone</th>
+        <th>Matrícula</th>
+        <th>Endereço</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+    <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.cpf %></td>
+          <td><%= user.rg %></td>
+          <td><%= user.gender %></td>
+          <td><%= user.phone %></td>
+          <td><%= user.mte %></td>
+          <td><%= user.adress %></td>
+          <td><%= user.city %></td>
+          <td><%= user.state %></td>
+          <td><%= user.email %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+    </div>
+  </div>
+  </div>
+  <br>
+</section>

@@ -1,6 +1,6 @@
 class Admin::NewslettersController < ApplicationController
   before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:index, :destroy]
+  #before_action :authenticate_user!, only: [:index, :destroy]
 
   layout "layouts/admin"
 
