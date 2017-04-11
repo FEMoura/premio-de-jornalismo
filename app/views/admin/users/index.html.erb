@@ -8,7 +8,6 @@
     <div class="table table-striped">
       <thead>
       <tr>
-        <th>Nº</th>
         <th>Nome</th>
         <th>CPF</th>
         <th>RG</th>
@@ -23,8 +22,10 @@
       </thead>
       <tbody>
     <% @users.each do |user| %>
-        <tr>
-          <td><%= user.user_id %></td>
+      <% if user.proposals.any? %>
+              <a href="/admin/proposal/<%= user.id %>">
+      <% end %>
+        <tr style= "cursor:  hand">
           <td><%= user.name %></td>
           <td><%= user.cpf %></td>
           <td><%= user.rg %></td>
@@ -36,10 +37,12 @@
           <td><%= user.state %></td>
           <td><%= user.email %></td>
         </tr>
+          <% unless user.proposals.nil? %>
+              </a>
+          <% end %>
     <% end %>
     </tbody>
   </table>
-    <small>Quantidade: <%= @users.count %></small>
     </div>
   </div>
   </div>
